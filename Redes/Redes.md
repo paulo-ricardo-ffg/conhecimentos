@@ -1,6 +1,28 @@
-#!/bin/bash
-echo 'Introdução de Redes em Windows XP'
- 
+Introdução de Redes em Windows XP'
+ _ Ferramentas;
+		<Novo>
+	_ Nome e Sistema Operacional:
+		Nome: LinuxMint21
+		Pasta da Máquina: (deixar o padrão do sistema) 
+		Tipo: Linux
+		Versão: Ubuntu (64-bit)
+		<Próximo>
+	_ Tamanho da memória:
+		Tamanho: 4096MB
+		<Próximo>
+	_ Disco Rígido:
+		Criar um novo disco rígido virtual agora
+		<Criar>
+	_ Tipo de arquivo de disco rígido
+		VDI (VirtualBOX Disk Image)
+		<Próximo>
+	_ Armazenamento em disco rígido físico
+		Dinamicamente alocado
+		<Próximo>
+	_ Localização e tamanho do arquivo
+		Localização: (deixar o padrão do sistema)
+		Tamanho do disco: 50GB
+		<Criar>
 Host Name = nome da maquina 
  
 IP = CPF um numero que identifica a minha maquina 
