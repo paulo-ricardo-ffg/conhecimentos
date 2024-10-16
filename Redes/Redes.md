@@ -1,280 +1,91 @@
-Introdução de Redes em Windows XP'
- _ Ferramentas;
-		<Novo>
-	_ Nome e Sistema Operacional:
-		Nome: LinuxMint21
-		Pasta da Máquina: (deixar o padrão do sistema) 
-		Tipo: Linux
-		Versão: Ubuntu (64-bit)
-		<Próximo>
-	_ Tamanho da memória:
-		Tamanho: 4096MB
-		<Próximo>
-	_ Disco Rígido:
-		Criar um novo disco rígido virtual agora
-		<Criar>
-	_ Tipo de arquivo de disco rígido
-		VDI (VirtualBOX Disk Image)
-		<Próximo>
-	_ Armazenamento em disco rígido físico
-		Dinamicamente alocado
-		<Próximo>
-	_ Localização e tamanho do arquivo
-		Localização: (deixar o padrão do sistema)
-		Tamanho do disco: 50GB
-		<Criar>
-Host Name = nome da maquina 
- 
-IP = CPF um numero que identifica a minha maquina 
- 
-MAC ADRESS = RG um numero único que identifica minha placa de rede 
- 
-o Host Name i o MAC Adress tem quer ser diferentes para n dar incompatibilidade na rede (O MAC Adress só tem q ser alterado em maquinas virtuais já q em maquinas físicas é impossível ter o mesmo numero) 
- 
-Cliente rede = Permite quer você use a rede  
- 
-Compartilhamento de arquivos e impressora pra rede = Compartilhar arquivos pela rede 
- 
-Agendador de pacote QOS = Melhorar os arquivos enviador pela rede (Deve ser ativo no mesmo local do TCP/IP 
- 
-TCP/IP = Editar as propriedades da rede 
- 
-ICMP = Permitir computadores a fazer coisas básicas em outro por rede 
- 
-Em rede se usa Contra-Barra ‘’\’’ para acessar os locais 
-em vez da barra ‘’/’’ tradicional 
- 
+Conceitos Básicos de Redes no Windows XP:
+```
+Host Name (Nome do Host):
+Refere-se ao nome da sua máquina na rede, identificando-a de forma única.
 
-Gateway = O ‘’ip’’ do roteador que se comunica com a internet , ele é o caminho do seu computador a internet 
- 
-Comandos para Redes 
-ipconfig /all  (Ver as configurações de rede) 
-hostname (Ver nome da Máquina) 
-net view (Ver computadores na Rede) 
- 
-net send (enviar uma mensagem para um pc na rede para outro) 
-ative o serviço ‘’mensagem’’ na área dos serviços do windows 
- 
-net send * (enviar uma mensagem para todos pcs na rede) 
- 
-Tracert ‘’nomedosite.com’’ (Rastrear rota do seu computador até o site) 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-Alterar o Hostname 
-Interface gráfica do usuário, Texto, Aplicativo
+IP (Endereço IP):
+Comparável ao "CPF" da máquina, é um número que identifica sua máquina dentro da rede.
 
-Descrição gerada automaticamente 
- 
- 
- 
- 
- 
- 
+MAC Address:
+Similar ao "RG", é um número único que identifica a placa de rede do seu computador
 
-Clique com botão direito na pasta 
-Clique em Propriedades 
-Interface gráfica do usuário, Texto, Aplicativo, Email
+Cliente de Rede:
+Permite que você utilize os recursos da rede, como acesso a outros computadores.
 
-Descrição gerada automaticamente 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-Em Propriedades clique em Compartilhamento 
-Compartilhar esta pasta na Rede 
-Interface gráfica do usuário, Texto, Aplicativo
+Compartilhamento de Arquivos e Impressoras para Rede:
+Funcionalidade que possibilita compartilhar arquivos e impressoras com outros computadores na mesma rede.
 
-Descrição gerada automaticamente 
- 
+Agendador de Pacotes QoS:
+Melhora a qualidade de envio de arquivos pela rede. Ele deve ser ativado junto com as configurações do TCP/IP.
 
- 
+TCP/IP (Protocolo de Controle de Transmissão/Protocolo de Internet):
+Permite configurar as propriedades de rede, como o endereço IP, máscara de sub-rede e gateway.
 
- 
+Gateway (Roteador):
+O "IP" do seu roteador, que serve como o caminho entre seu computador e a internet.
 
- 
+ICMP (Protocolo de Mensagens de Controle da Internet):
+Facilita a comunicação entre computadores na rede, permitindo a realização de diagnósticos básicos, como o comando "ping".
+```
 
- 
- 
-Para que esse processo funcione a máquina deve ter o IP fixo em Propriedades de protocolo IP V4 TCP/IP (Diferente das outras maquinas na rede) 
- 
- 
- 
- 
- 
- 
- 
- 
+Teclas Usadas em Rede
+```
+Barra Invertida "\" na Rede:
+Para acessar recursos em rede, usa-se a barra invertida "\" em vez da barra tradicional "/".
+```
 
- 
+Comandos de Rede no Windows XP:
+```
+ipconfig /all:
+Mostra todas as configurações de rede do computador.
 
- 
+hostname:
+Exibe o nome da máquina.
 
- 
+net view:
+Exibe os computadores conectados à rede.
 
- 
+net send:
+Envia uma mensagem para um computador específico na rede. Para isso, o serviço "mensagem" precisa estar ativado.
 
- 
+*net send :
+Envia uma mensagem para todos os computadores na rede.
 
- 
+tracert [nomedosite.com]:
+Mostra a rota que o computador faz até chegar ao site indicado.
+```
 
- 
- 
-Mapear Pasta na Rede 
-Na pasta que esta sendo compartilhada clique com botão direito em ‘’Mapear Unidade’’ 
+Alterar o Hostname:
+Clique com o botão direito na pasta.
+Selecione Propriedades.
+Clique na aba Compartilhamento.
+Marque a opção Compartilhar esta pasta na Rede.
+Observação: Para o compartilhamento funcionar corretamente, o computador precisa ter um endereço IP fixo, configurado nas propriedades do protocolo IPv4 (TCP/IP).
 
-Interface gráfica do usuário, Aplicativo
+Mapeamento de Pastas na Rede:
+Clique com o botão direito na pasta compartilhada e selecione Mapear Unidade.
+Escolha uma letra para a unidade mapeada.
+Agora, essa pasta aparecerá em "Meu Computador" como uma "Unidade de Rede", com a letra que você escolheu.
+Compartilhamento de Pasta Oculta:
+Para criar uma pasta compartilhada secreta, adicione o símbolo "$" no final do nome da pasta. Exemplo: \\192.168.1.10\segredo$.
+Somente quem souber o caminho completo poderá acessar essa pasta.
 
-Descrição gerada automaticamente 
- 
- 
+Compartilhamento de Impressoras na Rede:
+O processo é o mesmo do compartilhamento de pastas. A impressora será visível e acessível para outros computadores na rede.
 
-Selecione a Letra da Unidade  
-Interface gráfica do usuário, Aplicativo
-
-Descrição gerada automaticamente 
- 
- 
-
-Agora com a Unidade de Rede mapeada ela aparecerá em Meu Computador como ‘’Unidade de Rede’’ com a letra escolhida 
- 
-
- 
-
-Caso queira compartilhar uma pasta secreta coloque o símbolo de $ no final do nome 
- 
-Texto
-
-Descrição gerada automaticamente 
- 
- 
- 
- 
- 
- 
- 
-assim só quem conhecer o caminho para a pasta conseguira acessar pela rede 
-Digitando exemplo \\192.168.1.10\segredo$ 
- 
-Interface gráfica do usuário, Aplicativo
-
-Descrição gerada automaticamente 
- 
-Para Compartilhar uma impressora na rede o Processo é o mesmo da pasta 
- 
-Liberando Acesso Remoto (MSTSC) 
- 
-Teclado de computador
-
-Descrição gerada automaticamente 
-Win+Pause 
- 
-Remoto e Permitir Que Usuarios de conectem remotamente a este computadorInterface gráfica do usuário, Texto, Aplicativo, Email
-
-Descrição gerada automaticamente 
- 
-Após isso acesse o MSTSC  
-Interface gráfica do usuário
-
-Descrição gerada automaticamente 
- 
-Digite o IP do computador que deseja acessar 
- 
-Tela de celular com publicação numa rede social
-
-Descrição gerada automaticamente 
- 
-Após isso digite o Nome do usuario e a senha dele 
- 
-Interface gráfica do usuário, Aplicativo
-
-Descrição gerada automaticamente 
-e pronto agora voce esta no computador remoto 
-Interface gráfica do usuário, Gráfico de mapa de árvore
-
-Descrição gerada automaticamente 
- 
-PROVA (1 Print para cada Item) 
-
-Instalar mais 1 Windows XP (não esquecer de Trocar o MAC se clonar) 
-Tela de computador
-
-Descrição gerada automaticamente 
-
-Hostname PCTime 
-Interface gráfica do usuário, Aplicativo
-
-Descrição gerada automaticamente 
-
-Ip – 192.168.1.30 
-Interface gráfica do usuário, Aplicativo
-
-Descrição gerada automaticamente 
-
-Testar o Ping com os PCs 192.168.1.10 e 192.168.1.20 
-Tela de computador com jogo
-
-Descrição gerada automaticamenteTela de computador com jogo
-
-Descrição gerada automaticamente 
-
-Compartilhar a Pasta TIME somente Leitura 
-Interface gráfica do usuário
-
-Descrição gerada automaticamente 
-
-Compartilhar a Pasta RIVAL com Leitura e gravação 
-Interface gráfica do usuário, Aplicativo
-
-Descrição gerada automaticamente 
-
-Mapear Time em T: e Rival em R: 
-Interface gráfica do usuário, Aplicativo
-
-Descrição gerada automaticamente 
-
-Criar uma compartilhamento Oculto JOGO 
-Interface gráfica do usuário
-
-Descrição gerada automaticamente 
-
-Compartilhar uma Impressora Epson no PCTime 
-Tela de computador com texto preto sobre fundo branco
-
-Descrição gerada automaticamente 
-
-Acessar a Impressora de um outro PC na REDE 
-Interface gráfica do usuário, Aplicativo
-
-Descrição gerada automaticamente 
-
-Enviar uma mensagem NET SEND para Todos SEXTOU !!! 
-Tela de computador com jogo
-
-Descrição gerada automaticamente 
-
-Testar os Comandos de REDE 
-Tela de computador com texto preto sobre fundo azul
-
-Descrição gerada automaticamente 
-
-Bom final de semana  
-
- 
+Acesso Remoto (MSTSC):
+Pressione Win + Pause.
+Vá até a aba Remoto e permita que usuários se conectem remotamente ao computador.
+Depois, abra o MSTSC, digite o IP da máquina que deseja acessar, e insira o nome de usuário e senha. Pronto! Agora você está conectado ao computador remoto.
+Teste de Configurações e Comandos de Rede:
+Instale um novo Windows XP (se for clonar, troque o MAC Address).
+Configure o Hostname como "PCTime".
+Defina o IP como 192.168.1.30.
+Teste o ping para os IPs 192.168.1.10 e 192.168.1.20.
+Compartilhe a pasta TIME com permissão de leitura.
+Compartilhe a pasta RIVAL com permissão de leitura e gravação.
+Mapeie a pasta TIME como unidade T: e RIVAL como R:.
+Crie um compartilhamento oculto chamado JOGO.
+Compartilhe uma impressora Epson no PCTime e acesse-a de outro computador na rede.
+Envie uma mensagem com net send para todos na rede com a frase: "SEXTOU!!!".
+Esses passos irão garantir que você esteja pronto para configurar redes e realizar testes básicos no Windows XP!
