@@ -1,4 +1,5 @@
-Introdução de Redes em Windows XP 
+#!/bin/bash
+echo 'Introdução de Redes em Windows XP'
  
 Host Name = nome da maquina 
  
