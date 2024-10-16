@@ -55,28 +55,87 @@ tracert [nomedosite.com]:
 Mostra a rota que o computador faz até chegar ao site indicado.
 ```
 
-Alterar o Hostname:
-Clique com o botão direito na pasta.
-Selecione Propriedades.
-Clique na aba Compartilhamento.
-Marque a opção Compartilhar esta pasta na Rede.
+
+Como Alterar o Hostname Windows XP
+
+```
+pressionando Win + Pause/Break
+Vá para a Aba "Nome do Computador":
+
+Quando a janela Propriedades do Sistema abrir, clique na aba Nome do Computador.
+```
+![HOSTNAMEIMAGEM](https://github.com/paulo-ricardo-ffg/senac-aulas/blob/main/imagens/IMAGEM1.png?raw=true)
+
+
+Como Compartilhar uma Pasta na Rede
+
+```
+Clique com o Botão direito na pasta desejada e selecione Propriedades
+Apos isso clique em Compartilhamento
+Marque a Opção Compartilhar esta Pasta na Rede
+```
+
+![COMPARTILHAMENTOPASTA](https://github.com/paulo-ricardo-ffg/senac-aulas/blob/main/imagens/IMAGEM3.png?raw=true)
+```
 Observação: Para o compartilhamento funcionar corretamente, o computador precisa ter um endereço IP fixo, configurado nas propriedades do protocolo IPv4 (TCP/IP).
+```
+![image](https://github.com/user-attachments/assets/ea4a73ce-3b82-4fb1-932a-c734a6ec320a)
 
 Mapeamento de Pastas na Rede:
-Clique com o botão direito na pasta compartilhada e selecione Mapear Unidade.
+
+```
+Em Outro Computador na Rede Clique com o botão direito na pasta compartilhada e selecione Mapear Unidade.
+```
+![MAPEAMENTOPASTA](https://github.com/paulo-ricardo-ffg/senac-aulas/blob/main/imagens/IMAGEM4.png?raw=true)
+
+```
 Escolha uma letra para a unidade mapeada.
+```
+![LETRAUNIDADE](https://github.com/paulo-ricardo-ffg/senac-aulas/blob/main/imagens/IMAGEM5.png?raw=true)
+
+```
 Agora, essa pasta aparecerá em "Meu Computador" como uma "Unidade de Rede", com a letra que você escolheu.
+```
+![LOCALMAPEAMENTO](https://github.com/paulo-ricardo-ffg/senac-aulas/blob/main/imagens/IMAGEM6.png?raw=true)
+
 Compartilhamento de Pasta Oculta:
-Para criar uma pasta compartilhada secreta, adicione o símbolo "$" no final do nome da pasta. Exemplo: \\192.168.1.10\segredo$.
+```
+Para criar uma pasta compartilhada secreta, adicione o símbolo "$" no final do nome da pasta
+Exemplo:segredo$.
+```
+![PASTASECRETA](https://github.com/paulo-ricardo-ffg/senac-aulas/blob/main/imagens/IMAGEM7.png?raw=true)
+
+```
 Somente quem souber o caminho completo poderá acessar essa pasta.
+Exemplo: \\192.168.1.10\segredo$.
+```
+![CAMINHOSECRETA](https://github.com/paulo-ricardo-ffg/senac-aulas/blob/main/imagens/IMAGEM8.png?raw=true)
 
 Compartilhamento de Impressoras na Rede:
+```
 O processo é o mesmo do compartilhamento de pastas. A impressora será visível e acessível para outros computadores na rede.
+```
 
+Area de Trabalho Remoto
+```
 Acesso Remoto (MSTSC):
 Pressione Win + Pause.
-Vá até a aba Remoto e permita que usuários se conectem remotamente ao computador.
-Depois, abra o MSTSC, digite o IP da máquina que deseja acessar, e insira o nome de usuário e senha. Pronto! Agora você está conectado ao computador remoto.
+Clique em Remoto e Clique em ''Permita que usuários se conectem remotamente ao computador''
+```
+![REMOTO](https://github.com/paulo-ricardo-ffg/senac-aulas/blob/main/imagens/IMAGEM9.png?raw=true)
+
+```
+Depois, abra o MSTSC
+Digite o IP da máquina que deseja acessar
+Insira o nome de usuário e senha
+Pronto! Agora você está conectado ao computador remoto.
+```
+![ACESSOREMOTO](https://github.com/paulo-ricardo-ffg/senac-aulas/blob/main/imagens/IMAGEM10.png?raw=true)
+
+
+Desafio Para Mostrar que Aprendeu
+
+```
 Teste de Configurações e Comandos de Rede:
 Instale um novo Windows XP (se for clonar, troque o MAC Address).
 Configure o Hostname como "PCTime".
@@ -87,5 +146,6 @@ Compartilhe a pasta RIVAL com permissão de leitura e gravação.
 Mapeie a pasta TIME como unidade T: e RIVAL como R:.
 Crie um compartilhamento oculto chamado JOGO.
 Compartilhe uma impressora Epson no PCTime e acesse-a de outro computador na rede.
-Envie uma mensagem com net send para todos na rede com a frase: "SEXTOU!!!".
+Envie uma mensagem com net send para todos na rede com a frase: "REDES!!!".
 Esses passos irão garantir que você esteja pronto para configurar redes e realizar testes básicos no Windows XP!
+```
