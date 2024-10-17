@@ -1,4 +1,4 @@
-Conceitos Básicos de Redes no Windows XP: aaaaa
+Conceitos Básicos de Redes no Windows XP:
 ```
 Host Name (Nome do Host):
 Refere-se ao nome da sua máquina na rede, identificando-a de forma única.
