@@ -20,7 +20,7 @@
 **Função:** Responsável pela renderização gráfica, essencial para jogos e aplicações gráficas.  
 **Características:**
 - Pode ter ventiladores ou ser passiva (modelos antigos).
-- Conectada ao slot PCI Express.
+- Conectada ao slot PCI Express,sendo bom verificar qual é o da placa mãe, pois pode afetar o desemprenho da placa de video.
 - **ONBOARD:** Gráficos integrados ao processador.
 - **OFFBOARD:** Placa de vídeo dedicada conectada ao barramento PCI Express.
 - Também existem placas de rede, som e captura offboard.
