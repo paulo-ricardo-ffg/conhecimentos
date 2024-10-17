@@ -136,8 +136,7 @@ Pronto! Agora você está conectado ao computador remoto.
 Desafio Para Mostrar que Aprendeu
 
 ```
-Teste de Configurações e Comandos de Rede:
-Instale um novo Windows XP (se for clonar, troque o MAC Address).
+Instale um novo Windows XP na Maquina Virtual (se for clonar, troque o MAC Address).
 Configure o Hostname como "PCTime".
 Defina o IP como 192.168.1.30.
 Teste o ping para os IPs 192.168.1.10 e 192.168.1.20.
