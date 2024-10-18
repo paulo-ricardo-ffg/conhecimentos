@@ -1,6 +1,7 @@
 # Placa de Vídeo
 
-Existem várias marcas que vendem placas de vídeo, porém os chips gráficos delas são iguais. A NVIDIA e a AMD vendem os chips gráficos para essas marcas fabricarem seus PCBs de acordo com o modelo base deles. Essas marcas são chamadas de fabricantes.
+A placa de vídeo é composta por diversos componentes, e para compreendê-la é essencial entender melhor cada um deles. Embora existam várias marcas que vendem placas de vídeo, os chips gráficos são geralmente fornecidos por NVIDIA e AMD. Essas empresas vendem os chips, enquanto as marcas (chamadas fabricantes) produzem os PCBs (placas de circuito impresso) com base no design de referência fornecido pelos desenvolvedores dos chips.
+
 ## Chip Gráfico (Graphics Processing Unit - GPU)
 
 Também conhecido como GPU, é a unidade central responsável por processar e renderizar gráficos. Ele aloca e gerencia todos os componentes essenciais.
@@ -65,6 +66,15 @@ A litografia refere-se ao processo de fabricação que determina o tamanho dos t
 
 São os núcleos de processamento responsáveis por realizar operações em paralelo nas placas de vídeo, São parecidos com os nucleos dos Processadores, porem tendo uma Frequencia menor mas tendo um numero maior de nucleos.Eles desempenham um papel fundamental em tarefas como renderização de jogos, modelagem em 3D e cálculos complexos em inteligência artificial (IA). Esses núcleos permitem que a GPU execute múltiplas operações simultaneamente, aumentando significativamente a eficiência e o desempenho em aplicações que exigem alto poder computacional.
 
+## GPU Clock
+
+O **GPU Clock** (ou clock base) é a frequência em que a GPU opera em condições normais. Medido em MHz ou GHz, ele indica quantos ciclos por segundo os núcleos da GPU conseguem realizar. Um clock mais alto permite que a GPU processe mais dados por segundo, resultando em um aumento no desempenho gráfico ou computacional.
+
+## Boost Clock
+
+O **Boost Clock** é uma frequência mais alta que a GPU pode atingir temporariamente quando há uma demanda extra de processamento e as condições de temperatura e energia permitem. O **Boost Clock** ocorre de forma automática, ajudando a GPU a entregar mais desempenho em cenários de alta carga, como jogos intensivos ou tarefas de renderização 3D.
+"""
+
 ## ROPs (Render Output Units)
 
 - **Função**: Processam a fase final da renderização de imagens, lidando com tarefas como anti-aliasing e blending, que garantem qualidade visual na saída de pixels.
@@ -127,6 +137,42 @@ Se refere à quantidade de dados que podem ser transferidos entre a memória (co
 - **GDDR6**: Melhor desempenho e eficiência energética, ideal para jogos e aplicações modernas.
 - **GDDR6X**: Alto desempenho e largura de banda, otimizada para placas mais avançadas e exigentes.
 
+## Arrefecimento
+
+### Sistema de Resfriamento
+
+O sistema de resfriamento de uma placa de vídeo desempenha um papel crucial no desempenho e na durabilidade do hardware. Manter a GPU resfriada garante que ela funcione em seu potencial máximo, mesmo sob cargas intensas. Abaixo estão os principais fatores a serem considerados ao avaliar o sistema de resfriamento de uma placa de vídeo:
+
+### 1. Quantidade de Ventoinhas (Fans)
+
+A quantidade de ventoinhas em uma placa de vídeo influencia diretamente o fluxo de ar e a capacidade de dissipação de calor. Modelos com duas ou três ventoinhas geralmente têm melhor desempenho térmico, dissipando o calor de maneira mais eficiente durante tarefas pesadas, como jogos ou renderização 3D. Mais ventoinhas também ajudam a evitar o superaquecimento.
+
+### 2. Tamanho do Dissipador
+
+O dissipador é responsável por absorver o calor gerado pela GPU e distribuí-lo para que seja dissipado pelo ar movimentado pelas ventoinhas. Dissipadores maiores possuem uma área de superfície maior, o que melhora a capacidade de resfriamento. Um dissipador robusto é essencial para manter a temperatura da GPU estável, especialmente em cenários de uso intenso.
+
+### 3. Qualidade das Ventoinhas (Fans)
+
+A qualidade das ventoinhas é tão importante quanto a quantidade. Ventoinhas de alta qualidade oferecem um equilíbrio entre fluxo de ar eficiente e níveis de ruído reduzidos. Além disso, ventoinhas mais duráveis garantem um melhor resfriamento ao longo do tempo, minimizando falhas ou perda de eficiência.
+
+### 4. Quantidade e Qualidade dos Heat Pipes
+
+Os heat pipes são componentes críticos no sistema de resfriamento. Eles são tubos de condução térmica que transferem o calor diretamente da GPU para o dissipador. O calor é absorvido pela base da GPU e transportado pelos heat pipes para ser dissipado pelas ventoinhas. Quanto mais heat pipes a placa tiver, e quanto maiores eles forem, melhor será a capacidade de dissipar calor rapidamente e manter a GPU em temperaturas mais baixas.
+
+### Como funcionam os heat pipes:
+
+Os heat pipes contêm um fluido interno que evapora ao entrar em contato com o calor da GPU. Esse vapor é transferido através do tubo até uma área mais fria, onde ele condensa e libera o calor para o dissipador. Esse processo cíclico de evaporação e condensação é extremamente eficiente na remoção de calor.
+
+### 5. Material do Dissipador
+
+O material do dissipador influencia diretamente a eficiência térmica. Dissipadores de alumínio são comuns e mais acessíveis, mas dissipadores feitos de cobre ou que utilizam bases de cobre têm uma condutividade térmica superior, o que permite que o calor seja transferido de forma mais eficiente para as ventoinhas.
+
+### 6. Tecnologia de Ventoinhas (Fan Stop ou Zero RPM)
+
+Algumas placas de vídeo possuem tecnologias de resfriamento inteligentes, como o Fan Stop ou Zero RPM, que desligam as ventoinhas quando a GPU está em temperaturas baixas (por exemplo, quando não está sob carga). Isso ajuda a prolongar a vida útil das ventoinhas, reduzir o ruído e economizar energia, já que as ventoinhas só funcionam quando realmente necessário.
+
+#Tecnologias
+
 ## Tecnologias AMD e Nvidia
 [NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/)  [AMD](https://www.amd.com/en/products/specifications/graphics.html)
 1. **Ray Tracing**
@@ -161,45 +207,51 @@ Se refere à quantidade de dados que podem ser transferidos entre a memória (co
 
 # Dicas para Escolher uma Placa de Vídeo
 
-1. **Uso Pretendido**
-   - **Jogos**: Se você pretende jogar, verifique a performance em jogos que você deseja jogar.
-   - **Trabalho Gráfico**: Para design gráfico, edição de vídeo ou modelagem 3D, considere GPUs que tenham melhor desempenho em aplicações específicas.
+### 1. **GARANTIA**
+  - Fique atento à garantia oferecida pela loja e pelo fabricante. Em alguns casos, é necessário registrar o produto no site do fabricante após a compra para que a garantia seja válida. Geralmente, garantias de qualidade para placas de vídeo costumam ter uma duração de 3 anos.
 
-2. **Chip Gráfico (GPU)**
-   - Compare as GPUs da NVIDIA e AMD. Verifique a arquitetura, número de núcleos (CUDA Cores ou Stream Processors) e recursos do seu interesse como o Ray Tracing.
+### 2. **Construção**
+   - Escolha uma placa de vídeo com uma construção de qualidade. Dependendo do modelo, não é recomendado optar por uma que tenha apenas um ventilador ou que possua poucos heatpipes.
 
-3. **Memória de Vídeo (VRAM)**
-   - Verifique a quantidade de VRAM disponível (ex: 4GB, 8GB, 16GB).
+### 3. **Chip Gráfico (GPU)**
+  - Compare as GPUs da NVIDIA e AMD. Verifique a arquitetura, número de núcleos (CUDA Cores ou Stream Processors) e recursos do seu interesse como o Ray Tracing.
 
-4. **Tipo de VRAM (GDDR)**
-   - Prefira placas com GDDR6 ou GDDR6X para maior desempenho.
+### 4. **Memória de Vídeo (VRAM)**
+  - Verifique a quantidade de VRAM disponível (ex: 4GB, 8GB, 16GB).
 
-5. **Largura de Banda**
-   - Uma maior largura de banda (ex: GDDR5 vs. GDDR6) permite transferências de dados mais rápidas entre a GPU e a memória, melhorando a performance geral.
+### 5. **Tipo de VRAM (GDDR)**
+  - Prefira placas com GDDR6 ou GDDR6X para maior desempenho.
 
-6. **Litografia e Eficiência Energética**
-   - Observe o processo de fabricação (em nanômetros). Chips com litografias menores (5nm, 7nm) tendem a ser mais eficientes e gerar menos calor.
+### 6. **Largura de Banda**
+  - Uma maior largura de banda (ex: GDDR5 vs. GDDR6) permite transferências de dados mais rápidas entre a GPU e a memória, melhorando a performance geral.
 
-7. **Compatibilidade com Tecnologia Gráfica**
-   - Verifique se a placa suporta tecnologias como Ray Tracing, DLSS (NVIDIA) ou FSR (AMD), que podem melhorar a qualidade gráfica e desempenho.
+### 7. **Litografia e Eficiência Energética**
+  - Observe o processo de fabricação (em nanômetros). Chips com litografias menores (5nm, 7nm) tendem a ser mais eficientes e gerar menos calor.
 
-8. **Resfriamento e Design**
-   - Avalie o sistema de resfriamento da placa. Um bom resfriamento é essencial para manter o desempenho em altas cargas.
+### 8. **Compatibilidade com Tecnologia Gráfica**
+  - Verifique se a placa suporta tecnologias como Ray Tracing, DLSS (NVIDIA) ou FSR (AMD), que podem melhorar a qualidade gráfica e desempenho.
 
-9. **Tamanho e Conexões**
+### 9. **Uso Pretendido**
+  - **Jogos**: Se você pretende jogar, verifique a performance em jogos que você deseja jogar.
+  - **Trabalho Gráfico**: Para design gráfico, edição de vídeo ou modelagem 3D, considere GPUs que tenham melhor desempenho em aplicações específicas.
+
+### 10. **Tamanho e Conexões**
    - Confirme se a placa cabe no seu gabinete e se as conexões (PCIe) são compatíveis com a sua placa-mãe.
 
-10. **Suporte a Monitores**
-    - Verifique se a placa suporta a resolução e taxa de atualização do seu monitor (ex: 4K, 144Hz).
+### 11. **Suporte a Monitores**
+   - Verifique se a placa suporta a resolução e taxa de atualização do seu monitor (ex: 4K, 144Hz).
 
-11. **Orçamento**
-    - Defina um orçamento e compare as opções dentro da faixa de preço.
+### 12. **Orçamento**
+   - Defina um orçamento e compare as opções dentro da faixa de preço.
 
-12. **Avaliações e Comparações**
-    - Leia análises de especialistas e usuários sobre o desempenho real da placa em jogos e aplicações que você pretende usar.
+### 13. **Avaliações e Comparações**
+   - Leia análises de especialistas e usuários sobre o desempenho real da placa em jogos e aplicações que você pretende usar.
 
-13. **Atualizações Futuras**
-    - Considere a possibilidade de atualizar a placa no futuro. Modelos mais recentes podem oferecer suporte a novas tecnologias.
 
-# Consulte essas informações em
-[NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/)  [AMD](https://www.amd.com/en/products/specifications/graphics.html) [TechPowerUP](https://www.techpowerup.com/gpu-specs/) 
+
+# Consulte informações em
+[NVIDIA](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/) 
+
+[AMD](https://www.amd.com/en/products/specifications/graphics.html)
+
+[TechPowerUP](https://www.techpowerup.com/gpu-specs/) 
