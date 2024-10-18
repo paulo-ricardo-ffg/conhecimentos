@@ -63,7 +63,7 @@ A litografia refere-se ao processo de fabricação que determina o tamanho dos t
 
 ## CUDA Cores (NVIDIA) ou Stream Processors (AMD)
 
-São os núcleos de processamento responsáveis por realizar operações em paralelo nas placas de vídeo. Eles desempenham um papel fundamental em tarefas como renderização de jogos, modelagem em 3D e cálculos complexos em inteligência artificial (IA). Esses núcleos permitem que a GPU execute múltiplas operações simultaneamente, aumentando significativamente a eficiência e o desempenho em aplicações que exigem alto poder computacional.
+São os núcleos de processamento responsáveis por realizar operações em paralelo nas placas de vídeo, São parecidos com os nucleos dos Processadores, porem tendo uma Frequencia menor mas tendo um numero maior de nucleos.Eles desempenham um papel fundamental em tarefas como renderização de jogos, modelagem em 3D e cálculos complexos em inteligência artificial (IA). Esses núcleos permitem que a GPU execute múltiplas operações simultaneamente, aumentando significativamente a eficiência e o desempenho em aplicações que exigem alto poder computacional.
 
 ## ROPs (Render Output Units)
 
