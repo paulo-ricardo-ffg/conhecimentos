@@ -18,6 +18,32 @@ determina a compatibilidade com os processadores.
 verifique se ela possui dissipadores adequados e uma quantidade suficiente de fases de alimentação para o processador que você pretende utilizar.
 Placas-mães com chipsets melhores tendem a ter uma construção de maior qualidade, mas é importante sempre verificar esses aspectos.
 
+# Tamanho
+
+## Mini-ITX
+- **Tamanho**: O menor padrão comum.
+- **Dimensões**: 17 x 17 cm.
+- **Uso**: Ideal para computadores compactos e HTPCs (Home Theater PCs).
+- **Desvantagens**: Geralmente possui menos slots de expansão, mas ainda oferece bom desempenho para sistemas compactos.
+
+## Micro-ATX (mATX)
+- **Tamanho**: Versão menor do ATX.
+- **Dimensões**: 24,4 x 24,4 cm.
+- **Uso**: Bom equilíbrio entre tamanho e funcionalidade, adequado para a maioria dos PCs de médio porte.
+- **Popularidade**: Popular em computadores de médio porte e em gabinetes menores.
+
+## ATX (Advanced Technology Extended)
+- **Tamanho**: O padrão mais comum no mercado.
+- **Dimensões**: 30,5 x 24,4 cm.
+- **Uso**: Ideal para computadores de mesa, oferecendo mais slots de expansão e recursos.
+- **Popularidade**: Comumente usado em desktops de alto desempenho.
+
+## Extended ATX (E-ATX)
+- **Tamanho**: Maior que o ATX padrão.
+- **Dimensões**: Geralmente 30,5 x 33 cm (pode variar conforme o modelo).
+- **Uso**: Usado em placas-mãe de alta performance e servidores.
+- **Vantagens**: Oferece mais espaço para componentes adicionais e melhor gerenciamento térmico.
+
 # Intel Placa Mãe
 
 ## 1. Placas-Mãe H
