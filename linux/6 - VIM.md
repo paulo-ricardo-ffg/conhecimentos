@@ -57,17 +57,17 @@ Todos os comandos no Vim devem começar com `:`.
 
 # Divisões de Janela no Vim
 
-## Divisão Horizontal
+### Divisão Horizontal
 - **Criar uma divisão horizontal por comando:**
   - Comando: `:split` ou `:sp`
   - Atalho: `Ctrl + w, s` (duas vezes)
 
-## Divisão Vertical
+### Divisão Vertical
 - **Criar uma divisão vertical:**
   - Comando: `:vsplit` ou `:vsp`
   - Atalho: `Ctrl + w, v`
 
-## Navegação entre Janelas
+### Navegação entre Janelas
 - **Subir:** 
   - Atalho: `Ctrl + w, ↑`
 - **Descer:**
