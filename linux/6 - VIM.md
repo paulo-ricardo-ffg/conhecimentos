@@ -1,6 +1,6 @@
 # Introdução ao Vim
 
- O Vim é um editor de texto com mais comandos, mais elaborado e mais completo do que o Nano.
+O Vim é um editor de texto avançado e altamente configurável, muito usado no terminal, especialmente por programadores e administradores de sistemas. Ele oferece recursos como atalhos de teclado e modos de edição que tornam a edição rápida e eficiente, sendo essencial em sistemas Linux e Unix.
 
 ## Abrindo Arquivos
 
