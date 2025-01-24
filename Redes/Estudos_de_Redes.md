@@ -38,4 +38,20 @@ DHCP ,DHCP (Dynamic Host Configuration Protocol) é um protocolo de rede usado p
 Automatização: Atribui IPs automaticamente, facilitando a gestão da rede.
 Prevenção de conflitos de IP: Garante que cada dispositivo receba um IP único.
 Flexibilidade: Fornece outras configurações como DNS e gateway.
+---
+SLA: Contrato de Acordo Formal “Service Level Agreement”, Trata-se de um contrato que define claramente as expectativas entre fornecedor e cliente, estabelecendo metas de desempenho, prazos e qualidade que devem ser cumpridos.
+---
+Simplex: Via unica de envio, um envia o outro recebe.
+---
+Hallf Duplex: Via dupla, porem o segundo a enviar tem que esperar o primeiro terminar de enviar.
+---
+Full Duplex: ambos conseguem enviar ao mesmo tempo.
+---
 
+
+![image](https://github.com/user-attachments/assets/2a44e5ec-2919-436c-a4ff-e1668310103e)
+
+IPV4: Multcast, Broadcast, Unicast
+---
+IPV6: Sem Broadcast., menos ruido na rede.
+---
