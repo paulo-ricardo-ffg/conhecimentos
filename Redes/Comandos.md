@@ -1,4 +1,4 @@
-### Comandos Básicos de Configuração de Rede
+### Comandos Básicos de Configuração de Rede Cisco
 
 | Comando                          | Descrição                                      |
 |----------------------------------|------------------------------------------------|
@@ -8,3 +8,11 @@
 | `end`                            | Sair do modo de configuração global.           |
 | `copy running-config startup-config` | Salvar as configurações e sair.            |
 | `reload`                         | Reiniciar o dispositivo.                       |
+
+### Comandos Básicos de Configuração de Rede Windows
+
+| Comando                          | Descrição                                      |
+|----------------------------------|------------------------------------------------|
+| `ipconfig /release`              | Tirar o IP Automatico do DHCP.                 |
+| `ipconfig /renew`                | Renovar o IP do DHCP.                          |
+  
