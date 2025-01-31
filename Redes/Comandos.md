@@ -15,4 +15,6 @@
 |----------------------------------|------------------------------------------------|
 | `ipconfig /release`              | Tirar o IP Automatico do DHCP.                 |
 | `ipconfig /renew`                | Renovar o IP do DHCP.                          |
-  
+| `arp -a`                         | ver as redes locais                            |
+| `nslookup`                       | Para obter o endereço IP associado a um domínio|
+| `netstat -an`                    | usado para ver tudo que esta rodando na rede   |
