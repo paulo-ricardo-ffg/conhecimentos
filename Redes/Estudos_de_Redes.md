@@ -208,9 +208,49 @@
 
 ---
 
+## 💡 **Testes de Rede com ICMP (Ping)**
+
+### LAN (Rede Local)
+- **Ping < 1ms**: Perfeito.
+- **Ping = 1ms**: Possível problema de rede.
+- **Ping > 1ms**: Problema de rede.
+
+### WAN (Rede de Longa Distância)
+- **Ping = 10ms**: Perfeito.
+- **Ping > 100ms**: Problema de rede.
+
+---
+
+## 🌐 **Modelo OSI (Open Systems Interconnection)**
+
+O Modelo OSI é um padrão de referência para a comunicação entre sistemas em redes de computadores. Ele divide o processo de comunicação em **7 camadas**, cada uma com uma função específica. Vamos explorar cada uma delas:
+
+- **Camada Um**: Fisica, Cabos, Fibra, Bluetoog, 3G, 4G, 5G, ETC..
+- **Camada Dois**: Enlancee, Saindo da camada fisica e indo para o digital, Placa de rede, Switch e Interfaces de Rede
+- **Camada Tres**: Camada de Redes, IPv4, IPv6, Roteadores. Converte o MAC em IP e Busca caminhos para enviar as informações da Rede Local Usando o Roteador.
+- **Camada Quatro**: Camada de Transporte, TCP, UDP, ICMP.
+- **Camada Cinco**: Camada de Sessão, Estabelecer, Finalizar e Manter a Conexão, HTTP (Todos Protocolos tem uma Porta)
+- **Camada Seis**: Camada de Apresentação, Verifica Downloads, Aplica Crptografia e Filtra a segurança dos arquivos
+- **Camada Sete**: Camada de Aplicação,
+
+## 🌐 **Modelo TCP/IP**
+
+O **Modelo TCP/IP** é um conjunto de protocolos de comunicação usado para conectar dispositivos em redes, incluindo a internet. Ele possui **4 camadas**, cada uma com uma função específica:
+
+- **Camada Um**: Acesso a rede (CA 1 E 2 DO OSI)
+- **Camada Dois**: internet.
+- **Camada Tres**: Camada Transporde (camada 4 do OSI)
+- **Camada Quatro**: camada de Aplicação (Camada 5,6 e 7 do OSI)
+
+
+
+![image](https://github.com/user-attachments/assets/85104409-349c-4113-8e31-5a352ea88aaa)
+
+
 ## 📂 Anexos
 
 - [IP.pptx](https://github.com/user-attachments/files/18566125/IP.pptx)
 - ![image](https://github.com/user-attachments/assets/65c20fd9-1248-44d2-9ef3-09effe68b61b)
 - [exercicio.docx](https://github.com/user-attachments/files/18596049/exercicio.docx)
+- [OSI.PDF](https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-02.pdf)
 
