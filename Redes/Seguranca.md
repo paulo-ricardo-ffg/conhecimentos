@@ -10,7 +10,7 @@ Muitas vezes, o spyware se junta ao software legítimo ou a cavalos de Troia.
 - O adware é frequentemente instalado com algumas versões de software e é projetado para fornecer anúncios automaticamente a um usuário, na maioria das vezes em um navegador da Web. Você sabe quando vê! É difícil ignorar quando você se depara com anúncios pop-up constantes na tela.
 É comum o adware vir com spyware.
 
-## 🚪 **BeckDoor**
+## 🚪 **BackDoor**
 
 - Esse tipo de malware é usado para obter acesso não autorizado, ignorando os procedimentos normais de autenticação para acessar um sistema. Como resultado, os hackers podem obter acesso remoto a recursos em uma aplicação e emitir comandos de sistema remoto.
 Um backdoor funciona em segundo plano e é difícil de detectar.
