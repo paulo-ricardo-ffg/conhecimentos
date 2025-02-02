@@ -52,7 +52,7 @@ Os worms são responsáveis por alguns dos ataques mais devastadores na Internet
 # Tipos de Estrategias Usadas
 
 ## ⚙️ **Engenharia social**
-Engenharia social – manipulação do indivíduo para executar ações ou divulgar informações confidenciais Os engenheiros sociais frequentemente dependem da boa vontade das pessoas para ajuda, mas também miram nos pontos fracos. Por exemplo, um invasor ligará para um funcionário autorizado com um problema urgente que exija acesso imediato à rede e apelará para a vaidade, ganância ou invocação de autoridade do funcionário usando técnicas de remoção  de nome para obter esse acesso.
+Manipulação do indivíduo para executar ações ou divulgar informações confidenciais Os engenheiros sociais frequentemente dependem da boa vontade das pessoas para ajuda, mas também miram nos pontos fracos. Por exemplo, um invasor ligará para um funcionário autorizado com um problema urgente que exija acesso imediato à rede e apelará para a vaidade, ganância ou invocação de autoridade do funcionário usando técnicas de remoção  de nome para obter esse acesso.
 
 - Pretexting
 Isso ocorre quando um invasor liga para um indivíduo e mente para ele na tentativa de obter acesso a dados privilegiados.
@@ -62,12 +62,16 @@ Isso ocorre quando um invasor segue rapidamente uma pessoa autorizada até um lo
 - Algo por algo (Quid pro quo)
 É quando um hacker solicita informações pessoais de uma pessoa em troca de algo, como um brinde gratuito.
 
-## 🚫 **Dos(Denial of Service)**
+## 🚫 **Dos(Denial of Service) & DDoS (Distributed Denial of Service)**
 
 - Ataques de negação de serviço (DoS) são um tipo de ataque de rede que é relativamente simples de realizar, mesmo por um invasor não qualificado. Um ataque de negação de serviço (DoS) resulta em algum tipo de interrupção de serviço aos usuários, dispositivos ou aplicações.
 
-- DDoS (Distributed Denial of Service) Um ataque de negação de serviço distribuída (DDoS) é semelhante a um  ataque de negação de serviço (DoS), mas é proveniente de várias fontes coordenadas. Por exemplo:
-
-Um invasor cria uma rede (botnet) de hosts infectados chamados zumbis, que são controlados por sistemas de tratamento.
+- DDoS (Distributed Denial of Service) Um ataque de negação de serviço distribuída (DDoS) é semelhante a um  ataque de negação de serviço (DoS), mas é proveniente de várias fontes coordenadas. Por exemplo: Um invasor cria uma rede (botnet) de hosts infectados chamados zumbis, que são controlados por sistemas de tratamento.
 Os computadores zumbis examinam e infectam constantemente mais hosts, criando mais zumbis.
 Quando está pronto, o hacker instrui os sistemas controlador para fazer com que o botnet de zumbis execute um ataque de negação de serviço distribuído (DDoS).
+
+## 👤 **On-Path**
+Os invasores no caminho interceptam ou modificam as comunicações entre dois dispositivos, como um navegador e um servidor da Web, para coletar informações ou se passar por um dos dispositivos.
+
+- Man In The Middle (MITM)
+Um ataque de MitM acontece quando um criminoso digital assume o controle de um dispositivo sem o conhecimento do usuário. Com esse nível de acesso, ο invasor pode interceptar e capturar informações do usuário antes de transmiti-las ao seu destino desejado. Esses tipos de ataques costumam ser usados para roubar informações financeiras. 
