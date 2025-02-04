@@ -306,11 +306,14 @@ Para cada sub-rede, identifique:
 
 ![image](https://github.com/user-attachments/assets/85104409-349c-4113-8e31-5a352ea88aaa)
 
+---
 
+- ![image](https://github.com/user-attachments/assets/65c20fd9-1248-44d2-9ef3-09effe68b61b)
+
+---
 ## 📂 Anexos
 
 - [IP.pptx](https://github.com/user-attachments/files/18566125/IP.pptx)
-- ![image](https://github.com/user-attachments/assets/65c20fd9-1248-44d2-9ef3-09effe68b61b)
 - [exercicio.docx](https://github.com/user-attachments/files/18596049/exercicio.docx)
 - [OSI.PDF](https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-02.pdf)
 
