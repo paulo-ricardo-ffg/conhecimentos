@@ -244,6 +244,66 @@ O **Modelo TCP/IP** é um conjunto de protocolos de comunicação usado para con
 
 ---
 
+## **Sub-Rede (Subnet)**
+
+# 🛠 **Como Calcular uma Sub-rede Rapidamente**
+
+Siga estes passos para calcular sub-redes de forma rápida e eficiente:
+
+---
+
+## 1️⃣ **Identifique a Máscara de Sub-rede**
+- Se for a máscara padrão, defina quantas sub-redes deseja criar.
+- Exemplo: Para uma rede `192.168.1.0/24`, a máscara padrão é `255.255.255.0`.
+
+---
+
+## 2️⃣ **Descubra Quantos Bits Serão Usados para Sub-redes**
+- Use a fórmula:  
+  **2ⁿ ≥ número de sub-redes**  
+  Onde **n** é o número de bits emprestados da parte do host.
+- Exemplo: Para 4 sub-redes, use **2² = 4** (2 bits emprestados).
+
+---
+
+## 3️⃣ **Calcule a Nova Máscara**
+- Some os bits usados na parte de rede e converta para decimal.
+- Exemplo: Para `192.168.1.0/24` com 2 bits emprestados, a nova máscara será `/26` (24 + 2).  
+  - Em decimal: `255.255.255.192`.
+
+---
+
+## 4️⃣ **Determine o Intervalo das Sub-redes**
+- Use a fórmula:  
+  **256 - valor do novo octeto**  
+  Para encontrar o tamanho dos blocos de sub-redes.
+- Exemplo: Com máscara `255.255.255.192`, o intervalo será de **64** em **64**:
+  - Sub-rede 1: `192.168.1.0` a `192.168.1.63`
+  - Sub-rede 2: `192.168.1.64` a `192.168.1.127`
+  - Sub-rede 3: `192.168.1.128` a `192.168.1.191`
+  - Sub-rede 4: `192.168.1.192` a `192.168.1.255`
+
+---
+
+## 5️⃣ **Identifique os Endereços Importantes**
+Para cada sub-rede, identifique:
+- **Endereço de rede**: Primeiro endereço da sub-rede.
+  - Exemplo: `192.168.1.0`
+- **Primeiro host**: Endereço de rede + 1.
+  - Exemplo: `192.168.1.1`
+- **Último host**: Endereço de broadcast - 1.
+  - Exemplo: `192.168.1.62`
+- **Endereço de broadcast**: Último endereço da sub-rede.
+  - Exemplo: `192.168.1.63`
+
+
+---
+
+![image](https://github.com/user-attachments/assets/828b7d2f-18ba-42fb-9b5f-4fe6e4929ea3)
+
+
+---
+
 ![image](https://github.com/user-attachments/assets/85104409-349c-4113-8e31-5a352ea88aaa)
 
 
