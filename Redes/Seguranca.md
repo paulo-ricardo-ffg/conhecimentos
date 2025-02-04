@@ -46,6 +46,9 @@ Ao contrário dos vírus, os cavalos de troia não se replicam automaticamente, 
 Os worms compartilham padrões semelhantes: eles exploram vulnerabilidades do sistema, têm uma maneira de se propagar e contêm código mal-intencionado (payload) para causar danos a redes ou sistemas de computador.
 Os worms são responsáveis por alguns dos ataques mais devastadores na Internet. Em 19 horas, o worm infectou mais de 300.000 servidores em 2001.
 
+## 💲 **Cryptojacking**
+
+- O cryptojacking é uma ameaça emergente que se esconde no computador, telefone celular, tablet, laptop ou servidor do usuário, usando os recursos dessa máquina para "extrair" moedas criptografadas sem o consentimento ou conhecimento do usuário.
 
 ---
 
@@ -75,3 +78,19 @@ Os invasores no caminho interceptam ou modificam as comunicações entre dois di
 
 - Man In The Middle (MITM)
 Um ataque de MitM acontece quando um criminoso digital assume o controle de um dispositivo sem o conhecimento do usuário. Com esse nível de acesso, ο invasor pode interceptar e capturar informações do usuário antes de transmiti-las ao seu destino desejado. Esses tipos de ataques costumam ser usados para roubar informações financeiras. 
+
+## 💻 **Vulnerabilidades de Hardware & Software**
+
+- Vulnerabilidades de Hardware são frequentemente introduzidas por falhas de projeto de hardware. Por exemplo, o tipo de memória chamado RAM  consiste basicamente em muitos capacitores (um componente que pode conter uma carga elétrica) instalados muito próximos um do outro. No entanto, logo foi descoberto que, devido à sua proximidade, as mudanças aplicadas a um desses capacitores poderiam influenciar os capacitores vizinhos. Com base nessa falha, foi criado um exploit chamado Rowhammer. Ao acessar (martelar) repetidamente uma linha de memória, a exploração do Rowhammer aciona interferências elétricas que eventualmente corrompem  os dados armazenados na RAM.
+
+## 💿 **Vulnerabilidades de Softweres**
+
+- Estouro de Buffer (Buffer Overflow) = Os buffers são áreas de memórias alocadas a um aplicativo. Uma vulnerabilidade ocorre quando os dados são gravados além dos limites de um buffer. Ao alterar os dados além dos limites de um buffer, o aplicativo pode acessar a memória alocada para outros processos. Isso pode levar a uma falha do sistema ou  comprometimento de dados ou fornecer escalonamento de privilégios.
+
+- Entrada não Valida(Non Validated input) = Os programas geralmente exigem entrada de dados, mas esses dados recebidos podem ter conteúdo malicioso, projetado para forçar o programa a se comportar de maneira não intencional. Por exemplo, considere um programa que recebe uma imagem para processamento. Um usuário mal-intencionado pode criar um arquivo de imagem com dimensões de imagem inválidas. As dimensões criadas de forma mal-intencionada podem forçar o programa a alocar buffers de tamanhos incorretos e inesperados.
+
+- Condição de Corrida(Race Conditions) = Esta vulnerabilidade descreve uma situação em que a saída de um evento depende de saídas ordenadas ou cronometradas. Uma condição de corrida se torna uma fonte de vulnerabilidade quando os eventos ordenados ou cronometrados necessários não ocorrem na ordem correta ou na sincronização apropriada.
+
+- Fragilidade nas Praticas de Segurança (Weaknesses in Security practices) = Sistemas e dados confidenciais podem ser protegidos por meio de técnicas como autenticação, autorização e criptografia. Os desenvolvedores devem manter o uso de técnicas de segurança e bibliotecas que já foram criadas, testadas e verificadas e não devem tentar criar seus próprios algoritmos de segurança. É provável que elas introduzam novas vulnerabilidades.
+
+- Problemas de Controle de Acesso (Access Control Problems)O controle de acesso é o processo de controlar quem faz o quê e abrange desde o gerenciamento do acesso físico ao equipamento até ditar quem tem acesso a um recurso, como um arquivo, e o que pode ser feito com ele, como ler ou alterar o arquivo. Muitas vulnerabilidades de segurança são criadas com o uso indevido de controles de acesso.Quase todos os controles de acesso e as práticas de segurança poderão ser superados se o invasor tiver acesso físico ao equipamento de destino. Por exemplo, não importa as configurações de permissão em um arquivo, um hacker pode ignorar o sistema operacional e ler os dados diretamente do disco. Para proteger a máquina e os dados que ela contém, o acesso físico deve ser restrito e as técnicas de criptografia devem ser usadas para proteger dados contra roubo ou danos.
