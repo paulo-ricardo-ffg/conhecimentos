@@ -1,0 +1,74 @@
+!Comentarios
+enable (en)
+    !Modo de Configuração de Data e Hora
+    Clock set 19:30:00 04 Februery 2025 
+    !Modo de Configuraçao Global
+    configure terminal
+
+        !Configuração do HostName
+        hostname sw-01
+        !Serviço de Senhas
+        service password-encryption
+        !Serviço de Marcação de Data e Hora
+        service timestamps log datetime msec
+        !Desativar a Resolução de Nomes
+        no ip domain-lookup
+        !Banner da Mensagem do Dia
+        banner motd #AVISO: CUIDADO#
+        !Segurança do Modo Enable
+        enable secret 123@senac
+        !Criando Usuarios e Senhas de Acesso
+        username senac secret 123@senac
+        username paulo password 123@senac
+        username admin privilege 15 secret 123@senac
+        !Configurar a Linha (Line) Console
+        line console 0 
+            !Forçar Login Local
+            login local 
+            !Forçar Senha no Console
+            password 123@senac
+            !Sincronismo de Log
+            logging synchronous
+            !Tempo de Inatividade
+            exec-timeout 5 30
+            !Sair de todos os Modos
+            end
+    !Salvar as Configuraçãos da RAM para NVRAM
+    copy running-config startup-config
+!Sair do Modo Enable
+disable
+!Encerrar sessão
+exit
+
+enable
+    !Visualizando as Configurações
+    show running-config
+
+
+
+    enable
+        Configure terminal
+            !Configurar as Linhas Virtuais
+            line vty 0 4
+                login local
+                password 123@senac
+                logging synchronous
+                exec-timeout 5 30
+                transport input ssh 
+                end
+        copy running-config startup-config
+
+    enable
+        Configure terminal
+        !Configurar o Gateway Padrão
+        ip default-gateway 192.168.1.254
+        !Configurar a SVI do Switch
+        interface vlan 1
+            !Configurar a Descrição
+            description Interface de SVI
+            !Configurar o Endereço IPv4
+            ip address 192.168.1.250 255.255.255.0
+            !Iniciar a Interface SVI
+            no shutdown
+            end
+    write
