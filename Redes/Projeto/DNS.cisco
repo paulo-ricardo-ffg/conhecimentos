@@ -1,0 +1,8 @@
+enable
+    configure terminal
+        ip domain-lookup
+        !ip domain-name senac.br
+        ip name-server 192.168.1.1
+        ip host google 8.8.8.8
+        end
+    write
