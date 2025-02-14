@@ -1,0 +1,44 @@
+Beckup Switch Cisco Catalyst 2960 Layer
+Ping sw-01
+ssh -l admin sw-01
+
+enable
+    !Mostra Informações da Caixa (Versão e Sistema Operacional)
+    show version
+    !Mostra o nome do sistema operacional que esta salvo no "HD" do switch e o Arquivo de Inicialização padrão
+    show boot
+    !Mostra o "HD" do Switch e seus arquivos 
+    show flash:
+        2960-lanbasek9-mz.150-2.SE4.bin
+    !fazer um Backup Basico na Ram do Switch
+    copy running-config startup-config
+    !Fazer um Backup na Flash do Switch o "HD"
+    copy startup-config flash
+    !Backup no VSCODE use o comando a baixo e copie o arquivo no VSCode, editando senhas e adicionando o "crypto key generate rsa general-keys modulus 1024" no SSH e o "no shutdown" na interface Vlan1.
+    show running-config
+    !Pingar o servidro
+    Ping server-01
+    !Backup por meio do TFTP(Enviar arquivos triviais via rede) para o dispositivo que desejar, no caso o Servidor.
+    copy startup-config tftp
+        192.168.1.1
+        sw-01-confg
+    show flash
+    !Backup do Sistema operacional via TFTP
+    copy flash: tftp
+        !Digite o nome exato do sistema que aparece no "show flash:", Para a segunda copia digite "copia-02"
+        
+!Backup do Roteador Cisco
+Backup Roteador
+    enable 
+    copy running-config startup-config
+    copy startup-config flash
+    show flash:
+        c1900-universalk9-mz.SPA.151-4.M4.bin
+    copy flash: tftp
+        c1900-universalk9-mz.SPA.151-4.M4.bin
+        192.168.1.1
+    copy startup-config tftp
+        192.168.1.1
+        rt-01-confg
+    !Backup VScode seguindo a mesma regra do Switch, Apagando as senhas e editando o que for necessario.
+    show running-config
