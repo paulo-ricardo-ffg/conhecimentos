@@ -148,5 +148,56 @@ Directory of flash:/
 - `show flash` → Verifica os arquivos na memória flash.
 
 
+# 📄 Backup do Roteador Cisco
+
+## 🔄 **Backup do Roteador**
+
+### 1️⃣ **Salvar a configuração atual no roteador**
+```bash
+enable  
+copy running-config startup-config  
+```
+
+### 2️⃣ **Fazer backup para a memória flash**
+```bash
+copy startup-config flash
+```
+
+### 3️⃣ **Verificar arquivos na memória flash**
+```bash
+show flash:
+# Exemplo de saída:
+c1900-universalk9-mz.SPA.151-4.M4.bin  
+```
+
+### 4️⃣ **Fazer backup do sistema operacional para um servidor TFTP**
+```bash
+copy flash: tftp
+# Especificar o arquivo a ser copiado
+c1900-universalk9-mz.SPA.151-4.M4.bin  
+# Especificar o endereço do servidor TFTP
+192.168.1.1  
+```
+
+### 5️⃣ **Fazer backup da configuração para um servidor TFTP**
+```bash
+copy startup-config tftp
+# Especificar o endereço do servidor TFTP
+192.168.1.1  
+# Nome do arquivo de backup
+rt-01-confg  
+```
+
+## 🖥️ **Backup no VS Code (para switches e roteadores)**
+Seguir a mesma lógica de backup do switch, apagando as senhas e editando as informações necessárias.
+
+### 🔍 **Verificar a configuração em execução**
+```bash
+show running-config
+```
+
+
+
 ## Material usado de referencia
-[VScode.txt](https://github.com/user-attachments/files/18791181/VScode.txt)
+
+[VScode.txt](https://github.com/user-attachments/files/18791463/VScode.txt)
