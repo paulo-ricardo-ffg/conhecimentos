@@ -16,7 +16,9 @@
 
 ## 🌐 Redes Locais e de Longa Distância
 
-### LAN (Local Area Network)
+## **Tipos de Redes e Comparação**
+
+### **LAN (Local Area Network)**
 - **Definição**: Rede que cobre uma área geográfica pequena (ex.: casa, escritório, escola).
 - **Características**:
   - Alta velocidade de transmissão.
@@ -25,7 +27,7 @@
   - Comunicação via cabos Ethernet ou Wi-Fi.
 - **Exemplo**: Rede doméstica ou de um pequeno escritório.
 
-### WAN (Wide Area Network)
+### **WAN (Wide Area Network)**
 - **Definição**: Rede que cobre uma área geográfica ampla (ex.: cidade, país, mundo).
 - **Características**:
   - Conecta várias LANs, permitindo comunicação entre redes distantes.
@@ -33,12 +35,58 @@
   - Requer tecnologias avançadas, como fibras óticas ou conexões via satélite.
 - **Exemplo**: A internet conecta diferentes LANs globalmente.
 
-| **Característica** | **LAN**                           | **WAN**                           |
-|--------------------|-----------------------------------|-----------------------------------|
-| **Área**           | Local (casa, escritório)          | Ampla (cidade, país, global)      |
-| **Velocidade**     | Alta                              | Mais lenta                        |
-| **Custo**          | Baixo                             | Alto                              |
-| **Exemplo**        | Rede doméstica, rede corporativa  | A internet                        |
+### **MAN (Metropolitan Area Network)**  
+- **Definição**: Rede que cobre uma cidade ou região metropolitana.  
+- **Características**:  
+  - Usa fibras óticas ou conexões de alta velocidade.  
+  - Maior que uma LAN, menor que uma WAN.  
+- **Exemplo**: Rede de provedores de internet locais.  
+
+### **RAN (Regional Area Network)**  
+- **Definição**: Rede que cobre regiões maiores que uma cidade, mas menores que um país.  
+- **Características**:  
+  - Interliga diversas MANs ou grandes LANs dentro de uma região.  
+- **Exemplo**: Rede de telecomunicações de uma empresa nacional.  
+
+### **CAN (Campus Area Network)**  
+- **Definição**: Rede que interliga diferentes LANs dentro de um campus universitário, empresa ou parque industrial.  
+- **Características**:  
+  - Pode ter cabeamento estruturado e redes sem fio.  
+- **Exemplo**: Rede de uma universidade com várias unidades.  
+
+### **PAN (Personal Area Network)**  
+- **Definição**: Rede de curto alcance para conexão de dispositivos pessoais.  
+- **Características**:  
+  - Utiliza tecnologias como Bluetooth, USB e NFC.  
+- **Exemplo**: Comunicação entre celular e fones de ouvido Bluetooth.  
+
+### **SAN (Storage Area Network)**  
+- **Definição**: Rede dedicada para armazenamento de dados.  
+- **Características**:  
+  - Alta velocidade e confiabilidade.  
+  - Utiliza protocolos específicos como Fibre Channel e iSCSI.  
+- **Exemplo**: Servidores de armazenamento em data centers.  
+
+### **WLAN (Wireless Local Area Network)**  
+- **Definição**: Versão sem fio da LAN, utilizando Wi-Fi para conexão.  
+- **Características**:  
+  - Permite mobilidade dos dispositivos.  
+  - Usa padrões como IEEE 802.11.  
+- **Exemplo**: Rede Wi-Fi de uma empresa ou casa.  
+
+---
+
+## **Tabela Comparativa das Redes**
+
+| **Característica**  | **LAN**                           | **WAN**                           | **MAN**                            | **CAN**                            | **PAN**                           | **SAN**                           | **WLAN**                           |
+|--------------------|----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| **Área**          | Local (casa, escritório)         | Ampla (cidade, país, global)     | Metropolitana (cidade)           | Campus universitário, indústria  | Pessoal (curto alcance)          | Data centers                      | Local sem fio                     |
+| **Velocidade**    | Alta                             | Variável, geralmente menor       | Média a alta                     | Alta                              | Baixa                             | Muito alta                        | Média a alta                      |
+| **Custo**        | Baixo                            | Alto                             | Médio                             | Médio                             | Muito baixo                      | Alto                              | Médio                              |
+| **Tecnologia**   | Ethernet, Wi-Fi                 | Fibras óticas, satélites        | Fibras óticas, WiMAX             | Ethernet, fibra, Wi-Fi           | Bluetooth, USB, NFC              | Fibre Channel, iSCSI              | Wi-Fi (802.11)                     |
+| **Exemplo**      | Rede doméstica, corporativa      | A Internet                      | Rede de provedores locais        | Universidade, campus industrial  | Fone Bluetooth, smartwatch       | Armazenamento em nuvem            | Rede Wi-Fi empresarial            |
+
+
 
 ---
 
