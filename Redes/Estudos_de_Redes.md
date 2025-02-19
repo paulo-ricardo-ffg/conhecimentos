@@ -74,6 +74,15 @@
   - Usa padrões como IEEE 802.11.  
 - **Exemplo**: Rede Wi-Fi de uma empresa ou casa.  
 
+### **VLAN (Virtual Local Area Network)**  
+- **Definição**: Segmentação lógica de uma rede física para melhorar segurança e desempenho.  
+- **Características**:  
+  - Reduz domínio de broadcast.  
+  - Facilita gerenciamento e segurança de rede.  
+  - Utiliza protocolos como IEEE 802.1Q para marcação de tráfego.  
+- **Exemplo**: Separação de redes para diferentes departamentos dentro de uma empresa usando apenas 1 switch ou mais.  
+
+
 ---
 
 ## **Tabela Comparativa das Redes**
