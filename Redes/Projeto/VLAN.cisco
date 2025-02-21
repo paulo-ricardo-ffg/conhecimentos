@@ -1,0 +1,69 @@
+Enable
+    configure terminal
+        !Criar Vlan "vlan <Numero da Vlan>"
+        vlan 10
+            !Nome pra VLAN "name <Nome da Vlan>""
+            name FIN
+        vlan 20
+            name EST
+        vlan 30
+            name FAT
+        vlan 40
+            name GER
+        vlan 50
+            name Server
+        vlan 60
+            name Wireless
+        vlan 99
+            name SVI-Switch
+            end
+write    
+!Ver Vlans    
+show vlan brief
+!Ver banco de dados da Vlan
+dir flash: vlan.dat 
+
+!Configuração do SVI e Porta de Acesso a VLAN
+enable
+    configure terminal
+        interface vlan 99
+            description interface de SVI SWITCH 3650
+            ip address 172.16.0.97 255.255.255.224
+            no shutdown
+            end
+write
+!Ver configuração de Ip da Interface
+show ip interface brief
+
+!Configuração das Portas de Acesso das Vlans
+enable
+    configure terminal
+        interface range GigabitEthernet 1/0/10 - 19
+            description Interfaces do Servidores
+            switchport mode access
+            switchport nonegotiate
+            switchport access vlan 50
+            end
+write
+show vlan brief
+!Configurar Vlans da Rede sem Fio
+enable
+    configure terminal
+        interface range GigabitEthernet 1/0/20 - 23
+            description Interface de Rede Sem Fio
+            switchport mode access
+            switchport nonegotiate
+            switchport access vlan 60
+            end
+write
+show vlan brief
+
+!Desativando Portas Sobresalentes
+enable
+    configure terminal
+        !Selecione as portas que você quer desativar com o Comando "Interface range <Portas>"
+        interface range gigabitEthernet 1/0/5 - 9 , gigabitEthernet 1/0/14 - 19 , gigabitEthernet 1/0/21 - 23 , gigabitEthernet 1/1/1 - 4
+            shutdown
+            end
+write
+show ip interface brief
