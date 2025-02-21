@@ -66,4 +66,29 @@ enable
             shutdown
             end
 write
+
+
 show ip interface brief
+
+    configure terminal
+    interface range fastEthernet 0/1 - 4
+    switchport mode access
+    switchport access vlan 10
+exit
+
+    interface range fastEthernet 0/5 - 9
+    switchport mode access
+    switchport access vlan 20
+    exit
+
+    interface range fastEthernet 0/10 - 14
+    switchport mode access
+    switchport access vlan 30
+    exit
+
+interface range fastEthernet 0/15 - 20
+switchport mode access
+switchport access vlan 40
+exit
+end
+write
