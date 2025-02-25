@@ -51,12 +51,20 @@
 | `switchport mode trunk` | Configura interface como trunk. | `switchport mode trunk` |
 | `switchport trunk allowed vlan <VLANS>` | Especifica VLANs permitidas. | `switchport trunk allowed vlan 10,20,30` |
 
+### 🔄 Configuração de EtherChannel
+| Comando | Descrição | Exemplo |
+|---------|-----------|---------|
+| `interface range <INTERFACES>` | Seleciona múltiplas interfaces. | `interface range gig0/1 - 4` |
+| `channel-group <NUMERO> mode <MODO>` | Configura EtherChannel. | `channel-group 1 mode active` |
+| `interface port-channel <NUMERO>` | Acessa a interface lógica do EtherChannel. | `interface port-channel 1` |
+
 ### 🛠️ Verificação e Diagnóstico
 | Comando | Descrição | Exemplo |
 |---------|-----------|---------|
 | `show running-config` | Exibe configuração ativa. | `show running-config` |
 | `show ip interface brief` | Mostra interfaces e IPs. | `show ip interface brief` |
 | `show vlan brief` | Lista VLANs. | `show vlan brief` |
+| `show etherchannel summary` | Exibe resumo dos EtherChannels. | `show etherchannel summary` |
 | `ping <IP>` | Testa conectividade. | `ping 192.168.1.1` |
 | `traceroute <IP>` | Mostra rota dos pacotes. | `traceroute 8.8.8.8` |
 
@@ -77,5 +85,3 @@
 | `arp -a` | Mostra tabela ARP. | `arp -a` |
 | `nslookup <DOMINIO>` | Resolve IP do domínio. | `nslookup google.com` |
 | `netstat -an` | Lista conexões ativas. | `netstat -an` |
-
---
