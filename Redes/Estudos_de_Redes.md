@@ -355,6 +355,31 @@ Para cada sub-rede, identifique:
 
 
 ---
+# 🌐 **O que é EtherChannel?**
+
+O **EtherChannel** é uma tecnologia que permite agregar (combinar) vários links físicos em um único link lógico. Isso aumenta a largura de banda, melhora a redundância e otimiza o uso dos recursos de rede.
+
+---
+
+## 💡 **Por que usar EtherChannel?**
+
+1. **Aumento de Largura de Banda**: Combina a capacidade de vários links físicos em um único link lógico.
+2. **Redundância**: Se um link falhar, o tráfego é automaticamente redirecionado para os links restantes.
+3. **Balanceamento de Carga**: Distribui o tráfego entre os links para evitar congestionamentos.
+4. **Simplicidade**: Facilita a administração da rede, pois vários links são tratados como um único.
+
+---
+
+## 🛠 **Como Funciona o EtherChannel?**
+
+- **Agregação de Links**: Vários links físicos são combinados em um único link lógico.
+- **Protocolos de Agregação**: Dois protocolos principais são usados para configurar o EtherChannel:
+  1. **PAgP (Port Aggregation Protocol)**: Protocolo proprietário da Cisco.
+  2. **LACP (Link Aggregation Control Protocol)**: Padrão IEEE (802.3ad).
+
+---
+
+---
 
 ![image](https://github.com/user-attachments/assets/828b7d2f-18ba-42fb-9b5f-4fe6e4929ea3)
 
