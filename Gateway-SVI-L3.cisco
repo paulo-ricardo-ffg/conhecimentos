@@ -1,0 +1,72 @@
+enable
+    configure terminal
+        ip routing
+        interface vlan 10
+            description Interface da VLAN 10
+            ip address 172.16.0.158 255.255.255.224
+            no shutdown
+            end
+    write
+
+enable
+    configure terminal
+        ip routing
+        interface vlan 20
+            description Interface da VLAN 20
+            ip address 172.16.0.190 255.255.255.224
+            no shutdown
+            end
+    write
+    ping 172.16.0.33
+
+ enable
+    configure terminal
+        ip routing
+        interface vlan 30
+            description Interface da VLAN 30
+            ip address 172.16.0.222 255.255.255.224
+            no shutdown
+            end
+    write
+    ping 172.16.0.33
+
+ enable
+    configure terminal
+        ip routing
+        interface vlan 40
+            description Interface da VLAN 40
+            ip address 172.16.0.254 255.255.255.224
+            no shutdown
+            end
+    write
+    ping 172.16.0.33
+
+ enable
+    configure terminal
+        ip routing
+        interface vlan 50
+            description Interface da VLAN 50
+            ip address 172.16.0.62 255.255.255.224
+            no shutdown
+            end
+    write
+    ping 172.16.0.33
+
+ enable
+    configure terminal
+        ip routing
+        interface vlan 60
+            description Interface da VLAN 60
+            ip address 172.16.0.94 255.255.255.224
+            no shutdown
+            end
+    write
+    show ip interface brief
+
+    ping 172.16.0.33
+
+enable
+    configure terminal
+    ip default-GateWay 172.16.0.97
+
+    
