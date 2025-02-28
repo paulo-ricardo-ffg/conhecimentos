@@ -1,0 +1,70 @@
+enable 
+    configure terminal
+        interface gigabitEthernet 1/0/24
+            no swithport
+            description  Interface com Route 4321
+            ip address 172.16.0.29 255.255.255.224
+            exit
+        ip default-gateway 172.16.0.30
+        end
+write
+
+----------------------------------------------------------------------------
+
+!Configuração do Router 4321
+enable
+    configure terminal
+        interface gigabitEthernet 0/0/1
+            description Interface Switch 3650
+            ip address 172.16.0.30 255.255.255.224
+            no shutdown
+            end
+write
+
+-----------------------------------------------------------------------------
+
+enable
+    configure terminal
+        interface gigabitEthernet 0/0/0
+            media-type sfp
+            description Interface WAN 4321 para 1941
+            ip address 10.0.0.2 255.255.255.252
+            no shutdown
+            end
+write
+
+-----------------------------------------------------------------------------
+
+enable
+    configure terminal
+        interface gigabitEthernet 0/0/0
+            description Interface WAN 1941 para 4321
+            ip address 10.0.0.1 255.255.255.252
+            no shutdown
+            end
+write
+
+-----------------------------------------------------------------------------
+
+enable
+    configure terminal
+         ip route 0.0.0.0 0.0.0.0 10.0.0.2
+        end
+write
+
+-----------------------------------------------------------------------------
+
+enable
+    configure terminal
+        ip route 192.168.1.0 255.255.225.0 10.0.0.1
+        ip route 0.0.0.0 0.0.0.0 172.16.0.29
+        end
+write
+
+-----------------------------------------------------------------------------
+
+enable
+    configure terminal
+    ip route 0.0.0.0 0.0.0.0 172.16.0.30
+    end
+write
