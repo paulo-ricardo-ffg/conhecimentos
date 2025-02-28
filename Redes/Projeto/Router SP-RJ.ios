@@ -34,3 +34,5 @@ write
 
 show running-config
 show ip route
+
+!Não se Esqueça de Configurar o GateWay e nem os IPS da maquinas
