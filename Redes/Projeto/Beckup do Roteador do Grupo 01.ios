@@ -1,0 +1,252 @@
+Building configuration...
+
+Current configuration : 7415 bytes
+!
+! Last configuration change at 22:31:05 UTC Mon Mar 24 2025 by mauricio
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname rt-g01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+security passwords min-length 8
+enable secret 4 D.ypdVr3FRhEsh3TDjrkDyDFbL3RbUr48j5o40PFfTA
+!
+no aaa new-model
+!
+ip cef
+!
+!
+!
+ip dhcp excluded-address 172.16.11.1 172.16.11.100
+ip dhcp excluded-address 172.16.11.200 172.16.11.254
+ip dhcp excluded-address 172.16.12.1 172.16.12.100
+ip dhcp excluded-address 172.16.12.200 172.16.12.254
+ip dhcp excluded-address 172.16.13.1 172.16.13.100
+ip dhcp excluded-address 172.16.13.200 172.16.13.254
+ip dhcp excluded-address 172.16.15.1 172.16.15.100
+ip dhcp excluded-address 172.16.15.200 172.16.15.254
+!
+ip dhcp pool vlan-11
+ network 172.16.11.0 255.255.255.0
+ default-router 172.16.11.254
+ dns-server 8.8.8.8 8.8.4.4
+ domain-name senac.br
+!
+ip dhcp pool vlan-12
+ network 172.16.12.0 255.255.255.0
+ default-router 172.16.12.254
+ dns-server 8.8.8.8 8.8.4.4
+ domain-name senac.br
+!
+ip dhcp pool vlan-13
+ network 172.16.13.0 255.255.255.0
+ default-router 172.16.13.254
+ dns-server 8.8.8.8 8.8.4.4
+ domain-name senac.br
+!
+ip dhcp pool vlan-15
+ network 172.16.15.0 255.255.255.0
+ default-router 172.16.15.254
+ dns-server 8.8.8.8 8.8.4.4
+ domain-name senac.br
+!
+!
+!
+no ip domain lookup
+ip domain name senac.br
+login block-for 120 attempts 4 within 60
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+license udi pid CISCO2911BR-SEC/K9 sn TSP1833ABCT
+!
+!
+username ricardo privilege 15 secret 4 D.ypdVr3FRhEsh3TDjrkDyDFbL3RbUr48j5o40PFf                                                                                                                     TA
+username roberto privilege 15 secret 4 D.ypdVr3FRhEsh3TDjrkDyDFbL3RbUr48j5o40PFf                                                                                                                     TA
+username mauricio privilege 15 secret 4 D.ypdVr3FRhEsh3TDjrkDyDFbL3RbUr48j5o40PF                                                                                                                     fTA
+!
+redundancy
+!
+!
+!
+!
+!
+ip ssh time-out 60
+ip ssh authentication-retries 2
+ip ssh version 2
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description Interface de Loopback para ID do OSPF do Grupo-01
+ ip address 1.1.1.1 255.255.255.255
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.10
+ description Subinterface da VLAN de SVI do Switch Layer 3 3560 do Grupo-01
+ encapsulation dot1Q 10
+ ip address 172.16.10.254 255.255.255.0
+ no cdp enable
+!
+interface GigabitEthernet0/0.11
+ description Subinterface da VLAN do Mauricio
+ encapsulation dot1Q 11
+ ip address 172.16.11.254 255.255.255.0
+ no cdp enable
+!
+interface GigabitEthernet0/0.12
+ description Subinterface de VLAN do Roberto
+ encapsulation dot1Q 12
+ ip address 172.16.12.254 255.255.255.0
+ no cdp enable
+!
+interface GigabitEthernet0/0.13
+ description Subinterface de VLAN do Ricardo
+ encapsulation dot1Q 13
+ ip address 172.16.13.254 255.255.255.0
+ no cdp enable
+!
+interface GigabitEthernet0/0.15
+ description Subinterface da VLAN Wireless
+ encapsulation dot1Q 15
+ ip address 172.16.15.254 255.255.255.0
+ no cdp enable
+!
+interface GigabitEthernet0/1
+ description Interface de Acesso do Grupo-01
+ ip address dhcp
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface Serial0/0/0
+ description Interface Sereal do Grupo-01 para Grupo-02
+ bandwidth 2000
+ ip address 192.168.1.1 255.255.255.252
+ clock rate 2000000
+!
+interface Serial0/0/1
+ description Interface Sereal do Grupo-06 para Grupo-01
+ bandwidth 2000
+ ip address 192.168.1.22 255.255.255.252
+!
+router ospf 1
+ router-id 1.1.1.1
+ log-adjacency-changes detail
+ auto-cost reference-bandwidth 10000
+ passive-interface GigabitEthernet0/0
+ passive-interface GigabitEthernet0/1
+ network 172.16.10.0 0.0.0.255 area 0
+ network 172.16.11.0 0.0.0.255 area 0
+ network 172.16.12.0 0.0.0.255 area 0
+ network 172.16.13.0 0.0.0.255 area 0
+ network 172.16.15.0 0.0.0.255 area 0
+ network 192.168.1.0 0.0.0.3 area 0
+ network 192.168.1.20 0.0.0.3 area 0
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+no cdp run
+!
+!
+!
+control-plane
+!
+!
+banner motd ^C
+
+
+                           +NMMMMMMMMMN+
+                        `/NMMMMMMMMMMMMMN+`
+                      `/d+ohMMMMMMMMMMMMMMm+`
+                      :MMMM`:hNMMMMMMMMMMMMM:
+                      :MMMM  osmMMdoo/+oooNM/
+                      :MMMM  dNMMMMNh `NNNMM/
+                      :MMMs  dMMMMMm+ `sMyNM/
+                      .oyymmmMd:yMMNmmmmy/+y-
+                      -y:sMMMM:.-sMMMMMM N/`
+                       -y`MMMMdmdmMMMMN: N.
+                        ` +mmmmmmmmmmdo  N.
+                           ss-+s:/s+-yd  N.    ```````
+                :++---     sN-hN+oNy-Ns  N. `-/+ymdd+o```
+               hNMMNo.      .`.-``-.`.   N./o//yds:o:dddd+:.
+               yNMMMs       -`.`..`.`- -hd. .sds.`:ooooo:yddo.        .--.
+                dMMMmo.    .+`s:++/s.oyMm`.smm+`/hMMMMMMh/`-ymys.-yyyo///+/.
+       `.-ss+   /mMMMMm+.  ddoo+oo+oodm+`.dMy-/hNMMMMMMMMN+`-yMMNdm++.   `+s
+     `:ymNMN. +. /dNMMMMm+`-..........-`+mMy.:hMMMMMMMMMMMN+ -sso..      -:`
+     oNMMMNs `Nm+..+dMMMMMmm+/.``-///+mmMNh+.sMMMMMMMMMMMMM+
+    oNMMMMd  dMMMm+..+dMMMMMMMmddmMMMMNddohN/+mMMMMMMMMMMMM+
+    yMMMMMd  MMMMMMm+`:MN/MMMMMMMMNmhoohhMMM+`+NMMMMMMMMMMs.
+    sNMMMMd  /MMMMMMMy-oNy/modNNy+syhMMMMMMMMo`.sNMMMMMNNo.
+     sMMMMNo  +NMMMMMMmosm`oNyssshdooosMMMMMMMh: .osssss.
+     `/dNMMN+  oNMMMMMMMmoo.NMMNNMNh+omMMMMMMMo` `odooos.
+     :yy//yyy   omMMMMMMMMmmMMMMMMdosNsMMMMMd/`  .osmmo`
+    .sy///       .-omMMMMMMMMMMMMMdoyMMMMdd/`    :MMMM`
+  .sNMNo            ./ommmmmmmmmmmmmmd///        :MMMm`
+ `mMMM+                    ``````                :MMM
+ +Nyoooooooooooooooooo/    MMMMMMd:              :MMM
+  `+ssdMMMMMMMMyssss/-++/  ````+s/               :MMM
+      `........     +NMMMd  :do.                 -hMM
+                    .--/dh  mMMm/                 -N-
+         `.  ...   `./ys.   mMMM+                -hh
+         :mo.mmmyssdNMMMh ` dNNN/                :d``
+         .yNmss.+smMMMm+.oNo.````                :d`N
+           `.yMNNNNMMy``+yyymNNNs//////          :d.M
+              ..shhh+``/hmmmoooyhhh#^C
+!
+line con 0
+ exec-timeout 5 30
+ password 7 101F5B4A250417050D07
+ logging synchronous
+ login local
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ exec-timeout 5 30
+ password 7 0055415524480E080E22
+ logging synchronous
+ login local
+ transport input ssh
+!
+scheduler allocate 20000 1000
+!
+end
