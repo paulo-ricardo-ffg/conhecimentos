@@ -27,6 +27,29 @@ Essa opção é feita dentro do próprio Windows Server. Funciona para RAID 0, 1
 
 4. **Finalizar o Assistente**
    - Selecione os discos → defina letra de unidade → formate → conclua.
+   - 
+### 🔵 Volume Distribuído (RAID 0)  
+🏎️ **Foco:** Desempenho Máximo
+
+**O que faz?**  
+Divide os dados em blocos e os grava simultaneamente em dois ou mais discos (**striping**). Isso aumenta muito a velocidade de **leitura e escrita**.
+
+#### ✅ Vantagens:
+- **Alto desempenho** – ideal para tarefas que exigem velocidade (edição de vídeo, jogos, cache).
+- **100% da capacidade é utilizada**  
+  *(ex: 2×1 TB = 2 TB utilizáveis)*
+
+#### ❌ Desvantagens:
+- **Zero tolerância a falhas** – se um disco falhar, **todos os dados são perdidos**.
+- **Não indicado para dados importantes ou sensíveis**.
+
+**🔢 Mínimo necessário:** 2 discos  
+**📦 Capacidade útil:**  
+`soma de todos os discos`  
+*Exemplo: 3×500 GB = 1,5 TB utilizáveis*
+![image](https://github.com/user-attachments/assets/bcbdabbc-789d-4799-8d35-5c0691a5802d)
+
+
 
 ### 🟣 Volume Espelhado (RAID 1)  
 🔒 **Foco:** Segurança e Redundância  
